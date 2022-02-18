@@ -1,0 +1,99 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+        
+        #RewriteCond %{HTTPS} off [OR]
+        #RewriteCond %{HTTP_HOST} !^www\. [NC]
+        #RewriteRule .* https://www.galorebayoptix.com/ [L,R=301]
+
+
+	 
+	RewriteCond $1 !^(index\\.php|resources|robots\\.txt)
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+	#RewriteBase /
+    #RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
+    #RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
+	
+    # Removes access to the system folder by users.
+    RewriteCond %{REQUEST_URI} ^system.*
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+    # Removes access to the application folder by users.
+    RewriteCond %{REQUEST_URI} ^application.*
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+    # Checks to see if the user is attempting to access a valid file, such as an image or css document, if this isn't true it sends the request to index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?/$1 [L]
+	
+</IfModule>
+
+
+
+#<IfModule mod_deflate.c>
+    #AddOutputFilterByType DEFLATE application/atom+xml \
+                          #text/javascript \
+                          #application/javascript \
+                          #application/json \
+                          #application/rss+xml \
+                          #application/vnd.ms-fontobject \
+                          #application/x-font-ttf \
+                          #application/xhtml+xml \
+                          #application/xml \
+                          #font/opentype \
+                          #image/svg+xml \
+                          #image/x-icon \
+                          #text/css \
+                          #text/html \
+                          #text/plain \
+                          #text/x-component \
+                          #text/xml
+#</IfModule>
+
+<IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresByType application/x-javascript A1209600
+        ExpiresByType text/javascript A1209600
+        ExpiresByType application/javascript A1209600
+        ExpiresByType text/css A31536000
+        ExpiresByType image/x-icon A2592000
+        ExpiresByType image/icon A2592000
+        ExpiresByType application/x-ico A2592000
+        ExpiresByType application/ico A2592000
+        ExpiresByType image/gif A2592000
+        ExpiresByType image/jpeg A1209600
+        ExpiresByType image/jpg A1209600
+        ExpiresByType image/png A1209600
+        ExpiresByType application/x-shockwave-flash A1209600
+        ExpiresByType font/ttf A2592000
+        ExpiresByType font/otf A2592000
+        ExpiresByType font/x-woff A2592000
+        ExpiresByType image/svg+xml A2592000
+        ExpiresByType font/truetype A2592000
+        ExpiresByType font/opentype A2592000
+        ExpiresByType application/x-font-woff A2592000
+        ExpiresByType application/vnd.ms-fontobject A2592000
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+        <filesmatch "\.(ico|flv|gif|swf|eot|woff|otf|ttf|svg)$">
+                Header set Cache-Control "max-age=2592000, public"
+        </filesmatch>
+        <filesmatch "\.(jpg|jpeg|png)$">
+                Header set Cache-Control "max-age=1209600, public"
+        </filesmatch>
+        <filesmatch "\.(eot|woff|otf|ttf|svg)$">
+                Header set Cache-Control "max-age=2592000, public"
+        </filesmatch>
+        # css and js should use private for proxy caching https://developers.google.com/speed/docs/best-practices/caching#LeverageProxyCaching
+        <filesmatch "\.(css)$">
+                Header set Cache-Control "max-age=31536000, private"
+        </filesmatch>
+        <filesmatch "\.(js)$">
+                Header set Cache-Control "max-age=1209600, private"
+        </filesmatch>
+</IfModule>

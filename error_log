@@ -1,0 +1,2 @@
+[17-Dec-2020 05:38:36 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 8192 bytes) in /home/doors/projects.doorsstudio.com/galorebay/application/libraries/Upload.php on line 2788
+[16-Dec-2020 23:43:40 America/Chicago] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 7280 bytes) in /home/doors/projects.doorsstudio.com/galorebay/application/libraries/Upload.php on line 2788

@@ -1,0 +1,113 @@
+/** Home Page **/
+
+@media (min-width: 979px){body{padding-top: 60px;}}
+
+/** 2 level sub menu **/
+
+.dropdown-menu-with-subs .sub-menu {left: 100%;position: absolute;top: 0;visibility: hidden;margin-top: -1px;}
+
+.dropdown-menu-with-subs li:hover .sub-menu {visibility: visible;display: block;}
+
+.navbar .sub-menu:before {border-bottom: 7px solid transparent;border-left: none;border-right: 7px solid rgba(0, 0, 0, 0.2);border-top: 7px solid transparent;left: -7px;top: 10px;}
+
+.navbar .sub-menu:after {border-top: 6px solid transparent;border-left: none;border-right: 6px solid #fff;border-bottom: 6px solid transparent;left: 10px;top: 11px;left: -6px;}
+
+/** Global **/
+
+#content {margin-left:0px;}
+
+.hide-sidebar, .show-sidebar {cursor: pointer;}
+
+.padd-bottom {margin-bottom: 5px;}
+
+.breadcrumb {margin: 0 0 0px;padding: 10px 0px;background-color: transparent;}
+
+.block {border: 1px solid #ccc;background: white;margin: 1em 0em;border-top: none;}
+
+.block-content {margin: 1em;min-height: .25em;}
+
+.block-header {margin-bottom: 0px;border-right: none;border-left: none;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;}
+
+.block-header div {padding-top: 10px;}
+
+.easyPieChart {margin: 0px auto;}
+
+.chart-bottom-heading {margin-top: 5px;text-align: center;}
+
+/* Icons
+
+------------------------- */
+
+.the-icons {margin-left: 0;list-style: none;}
+
+.the-icons li {float: left;width: 25%;line-height: 25px;}
+
+.the-icons i:hover {background-color: rgba(255,0,0,.25);}
+
+
+
+.login_bg{background-repeat:no-repeat;border:1px solid #f1f1f1;-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);-moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);box-shadow: 0 1px 10px rgba(0,0,0,0.1);margin-top: 5%;}
+
+.boxheadbg{background-color:#d43f3a;height:25px;color:#fff;font-weight:bold;text-transform:uppercase;text-align: left;}
+
+.header_bg{height:50px;padding:0px;margin:0px; background-color:#16a084;}
+
+.msg-container{position: fixed;height:auto;width: 100%;background-color: #333; z-index:9999;top:0; left:0;}
+
+.innerbox{padding: 5px 40px;}
+
+.msg-cross{font-size: 36px;position: absolute;right: 15px;color: #fff;top:6px; cursor:pointer;}
+
+.box-container{box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);width: 140px;}
+
+.box-txt{text-align: center;font-size: 14px;font-weight: bold; text-decoration:none;}
+
+.box-container > a > .box-txt:hover{ text-decoration:none;}
+
+.red-star{ color:#FF0000; font-size:20px;}
+
+.error-red {border: 1px solid #D20009 !important;background: #F3D9D9 !important;}
+
+#overlay, #model{width:100%; height:100%; overflow:hidden;}
+
+#overlay{display:none;}
+
+#model{background-color:#999999; opacity:0.6; position:fixed;top: 0;left: 0;}
+
+#overlay #overlay-content{position:fixed; top:35%; left:40%;z-index: 9999; background-color:#d43f3a; color:#fff;padding: 12px 25px;border-radius: 3px;font-size: 15px;}
+
+
+
+.popup-close{cursor: pointer;font-size: 46px;float:left;margin-left: 18px;color: #fff;margin-top: 4px;}
+
+.media-box, .inner-media-box{position:relative;height:115px; width:195px; float:left;}
+
+.inner-media-box{margin:1px;}
+
+.media-box:hover .media-delete-btn{display:inline;}
+
+.media-box:hover .mediadeletebtn{ display:inline;}
+
+.inner-media-box:hover .mediadeletebtn{ display:inline;}
+
+.p-rel{position:relative;}
+
+.p-abs{position:absolute;}
+
+.mediadeletebtn{top:50px;left:65px;display:none;z-index:9;cursor:pointer;}
+
+.alert{margin-bottom:5px !important;}
+
+.logo{max-height:56px;}
+
+.navbar .brand { padding:0 20px 0;}
+
+#search-form-container{display:none;}
+
+.block-header .btn{margin-top: -10px;margin-right: -21px;}
+
+#loader-msg{line-height:53px;}
+
+.media-browser:hover{text-decoration:none;}
+
+div.pagination>ul.pagination{margin-top:5px;}

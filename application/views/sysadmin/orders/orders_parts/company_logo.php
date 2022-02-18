@@ -1,0 +1,1 @@
+<img src="<?php echo ADMIN_ASSETS_PATH."img/logo.png"; ?>" />
