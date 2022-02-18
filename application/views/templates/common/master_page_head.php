@@ -1,7 +1,7 @@
 <title><?php echo $page_title;?></title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/x-icon" href="<?php echo ADMIN_ASSETS_PATH;?>favicon.png">
+<link rel="icon" type="image/x-icon" href="<?php echo ADMIN_ASSETS_PATH;?>favicon.png">
 
 <!-- Vendor styles -->
 <link rel="stylesheet" href="<?php echo ADMIN_ASSETS_PATH;?>vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
